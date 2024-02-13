@@ -1,0 +1,63 @@
+.listing {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.listing .photo-container {
+  position: relative;
+  border-radius: 30px 30px 0 0; /* Matches the listing's top border radius */
+  overflow: hidden; /* Ensures the delete button does not overflow the rounded corners */
+}
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+.listing-location {
+  padding: 10px 20px 20px 20px;
+}
+.listing-location::before {
+  content: url("/assets/location-pin.svg") / "";
+}
+
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+.listing .delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjust based on actual size and spacing needs */
+
+}
+
+.listing .select-check {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 30px;
+}
+
+.listing .delete-btn img {
+  display: block;
+  width: 30px;
+}

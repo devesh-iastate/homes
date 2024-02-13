@@ -1,0 +1,98 @@
+.search-and-compare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.search-form {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 10px; /* Space between the search form and the compare button */
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: auto; /* Adjust based on the presence of the compare button */
+  flex-grow: 1; /* Allows the input to grow and fill available space */
+}
+
+.compare-btn {
+  /* Additional styles if needed, or reuse .primary */
+}
+
+/* Adjust the button padding if needed to align with the new layout */
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .search-and-compare {
+    flex-direction: column;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-right: 0; /* No margin needed when stacked */
+  }
+
+  .compare-btn {
+    margin-top: 10px; /* Adds space between the buttons when stacked */
+  }
+
+  input[type="text"] {
+    width: calc(100% - 20px); /* Adjusts width to account for padding */
+  }
+}
+
+
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }
+}
+
+
