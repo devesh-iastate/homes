@@ -6,7 +6,7 @@ import { HousingLocation } from './housinglocation';
 })
 export class HousingService {
 
-  url = 'https://golden-peony-49b67a.netlify.app/.netlify/functions/json-server';
+  url = 'https://golden-peony-49b67a.netlify.app/.netlify/functions/json-server/locations';
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
     const data = await fetch(this.url);
