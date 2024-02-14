@@ -14,12 +14,12 @@ import {Router} from "@angular/router";
   ],
   template: `
     <section>
-      <div class="search and compare">
-      <form (submit)="filterResults(filter.value); $event.preventDefault()">
-        <input type="text" placeholder="Filter by city" #filter>
-        <button class="primary" type="submit">Search</button>
-      </form>
-      <button class="primary compare-btn" (click)="navigateToCompare()">Compare</button>
+      <div class="search-and-compare">
+        <form class="search-form" (submit)="filterResults(filter.value); $event.preventDefault()">
+          <input type="text" placeholder="Filter by city" #filter>
+          <button class="primary" type="submit">Search</button>
+        </form>
+        <button class="primary compare-btn" (click)="navigateToCompare()">Compare</button>
       </div>
     </section>
     <section class="results">

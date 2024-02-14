@@ -2,29 +2,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 20px;
 }
 
 .search-form {
   display: flex;
   flex-grow: 1;
-  margin-right: 10px; /* Space between the search form and the compare button */
+  margin-right: 10px;
 }
 
 input[type="text"] {
-  border: solid 1px var(--primary-color);
+  flex-grow: 0;
   padding: 10px;
-  border-radius: 8px;
   margin-right: 4px;
-  display: inline-block;
-  width: auto; /* Adjust based on the presence of the compare button */
-  flex-grow: 1; /* Allows the input to grow and fill available space */
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
 }
 
 .compare-btn {
-  /* Additional styles if needed, or reuse .primary */
+  margin-left: auto;
 }
 
+@media (max-width: 768px) {
+  .search-and-compare {
+    flex-direction: column;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .compare-btn {
+    margin-top: 10px;
+  }
+
+  input[type="text"] {
+    margin-right: 0;
+    width: calc(100% - 20px); /* Adjust based on padding */
+  }
+}
 /* Adjust the button padding if needed to align with the new layout */
 button {
   padding: 10px;
