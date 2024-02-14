@@ -1,0 +1,7 @@
+[build]
+  functions = "functions" # or "netlify/functions" depending on your directory structure
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/json-server/:splat"
+  status = 200
